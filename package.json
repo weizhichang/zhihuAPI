@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/weizhichang/zhihuAPI/issues"
   },
-  "homepage": "https://github.com/weizhichang/zhihuAPI#readme"
+  "homepage": "https://github.com/weizhichang/zhihuAPI#readme",
+  "dependencies": {
+    "koa": "^2.11.0"
+  }
 }
