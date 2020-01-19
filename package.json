@@ -1,0 +1,22 @@
+{
+  "name": "zhihuapi",
+  "version": "1.0.0",
+  "description": "zhihufuwuduan",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/weizhichang/zhihuAPI.git"
+  },
+  "keywords": [
+    "zhihu"
+  ],
+  "author": "weizhichang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/weizhichang/zhihuAPI/issues"
+  },
+  "homepage": "https://github.com/weizhichang/zhihuAPI#readme"
+}
