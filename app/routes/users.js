@@ -12,7 +12,7 @@ router.get('/',find);
  //params路由参数.查询某个用户
  router.get('/:id',findById);
  //更新用户
- router.patch('/:id',auth,update);
+ router.post('/update/:id',auth,update);
  //删除用户
  router.delete('/:id',auth,del);
  //用户登录

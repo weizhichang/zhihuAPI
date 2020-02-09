@@ -6,6 +6,7 @@ const mongoose = require('mongoose');
 const app = new Koa();
 const routing = require('./routes');
 const {connectionStr} = require('./config');
+const cors = require('koa-cors');
 
 mongoose.set('useFindAndModify', false);
 //连接数据库
@@ -33,6 +34,22 @@ mongoose.connection.on('error',console.error);
 //    }
 //    console.log('访问成功！');
 // });
+
+// 跨域设置
+// app.use(async (ctx, next)=> {
+//     ctx.set('Access-Control-Allow-Origin', '*');
+//     ctx.set('Access-Control-Allow-Headers', 'Content-Type, Content-Length, Authorization, Accept, X-Requested-With , yourHeaderFeild');
+//     ctx.set('Access-Control-Allow-Methods', 'PUT, POST, GET, DELETE,PATCH,OPTIONS');
+//     if (ctx.method == 'OPTIONS') {
+//       ctx.body = 200; 
+//     } else {
+//       await next();
+//     }
+//   });
+app.use(cors({
+    // maxAge:5,//指定本地预检请求的有效期，单位为秒。
+    allowMethods: ['GET', 'POST', 'PUT', 'DELETE','PATCH', 'OPTIONS'], //设置所允许的HTTP请求方法
+}));
 
 app.use(async (ctx,next)=>{
     try{
